@@ -15,9 +15,11 @@ export const TaskList = ({ tasks, setTasks }) => {
     <ul>
       {tasks.map((task, index) => (
         <li key={`todo-${index}`}>
-          {task.isDone ? <s>{task.label}</s> : task.label}
+          <p style={task.isLab ? {color: 'red'} : {color: 'black'}}>
+            {task.isDone ? <s>{task.label}</s> : task.label}
+          </p>
           <input
-            style = {{marginLeft: '30px', transform: 'scale(2.5)'}}
+            style = {{marginLeft: '30px', transform: 'scale(2.5)',}}
             onChange={(e) => handleCheckBox(e, index)}
             type="checkbox"
             checked={task.isDone}

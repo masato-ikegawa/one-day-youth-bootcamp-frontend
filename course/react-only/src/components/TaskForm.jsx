@@ -12,7 +12,8 @@ export const TaskForm = ({
   };
   // Taskの登録
   const handleAddTask = () => {
-    const newTask = { label: newTaskLabel, isDone: false }
+    const newTask = checkLaboTask(newTaskLabel) ? {label: newTaskLabel, isDone: false, isLab: true} : { label: newTaskLabel, isDone: false }
+    console.log(newTask)
     setTasks([...tasks, newTask]);
     setNewTaskLabel('');
   };
@@ -23,9 +24,9 @@ export const TaskForm = ({
   };
 
   
-  const checkLaboTask = (task) => {
+  const checkLaboTask = (label) => {
     const _tag = '[Lab]'
-    const label = task.label
+    console.log(label)
     return label.indexOf(_tag) === 0 ? true : false
   }
 
