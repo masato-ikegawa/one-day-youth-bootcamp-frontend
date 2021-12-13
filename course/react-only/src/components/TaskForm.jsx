@@ -22,12 +22,12 @@ export const TaskForm = ({
     setTasks(newTasks);
   };
 
-  // const checkLaboTasks = (task) => {
-  //   const _tag = '[Lab]'
-  //   const _label = task.label
-  //   const newTasks
-
-  // }
+  
+  const checkLaboTask = (task) => {
+    const _tag = '[Lab]'
+    const label = task.label
+    return label.indexOf(_tag) === 0 ? true : false
+  }
 
   return (
     <>
