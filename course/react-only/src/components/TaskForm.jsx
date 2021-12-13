@@ -26,7 +26,6 @@ export const TaskForm = ({
   
   const checkLaboTask = (label) => {
     const _tag = '[Lab]'
-    console.log(label)
     return label.indexOf(_tag) === 0 ? true : false
   }
 
