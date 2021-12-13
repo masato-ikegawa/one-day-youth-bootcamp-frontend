@@ -15,7 +15,7 @@ const App = () => {
   }, []);
 
   return (
-    <div style={{ width: '75%', margin: '0 auto', fontSize: '3vw',}}>
+    <div style={{ width: '75%', margin: '0 auto', fontSize: '2vw',}}>
       {/* ヘッダー */}
       <h1>Tutorial Works</h1>
       <h2>React Todo List</h2>
