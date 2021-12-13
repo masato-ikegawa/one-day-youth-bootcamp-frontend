@@ -15,7 +15,7 @@ export const TaskList = ({ tasks, setTasks }) => {
     <ul>
       {tasks.map((task, index) => (
         <li key={`todo-${index}`}>
-          <p style={task.isLab ? {color: 'red'} : {color: 'black'}}>
+          <p style={task.isLab ? {color: 'red', display: 'inline-block'} : {color: 'black', display: 'inline-block'}}>
             {task.isDone ? <s>{task.label}</s> : task.label}
           </p>
           <input
