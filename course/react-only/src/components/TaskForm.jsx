@@ -23,7 +23,15 @@ export const TaskForm = ({
     setTasks(newTasks);
   };
 
-  
+  // future task
+  const checkAnyTask = (label,tags) => {
+    let isTag = false
+    tags.map((_tag) => {
+      isTag = label.indexOf(_tag) === 0 ? true : false
+      if (isTag) return isTag
+    });
+  }
+
   const checkLaboTask = (label) => {
     const _tag = '[Lab]'
     return label.indexOf(_tag) === 0 ? true : false
