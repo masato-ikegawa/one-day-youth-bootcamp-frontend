@@ -10,6 +10,10 @@ export const TaskForm = ({
   const handleNewTaskLabel = (e) => {
     setNewTaskLabel(e.target.value);
   };
+  // Tag追加ボタン
+  const handleAddTag = () => {
+    setNewTaskLabel('[Lab] ')
+  }
   // Taskの登録
   const handleAddTask = () => {
     const newTask = checkLaboTask(newTaskLabel) ? {label: newTaskLabel, isDone: false, isLab: true} : { label: newTaskLabel, isDone: false }
@@ -68,6 +72,7 @@ export const TaskForm = ({
         borderColor: 'white',
       }}
       onClick={handleAddTask}>Add</button>
+      <button onClick={handleAddTag}>Lab</button>
       <br />
       <button onClick={handleClearTasks}>Clear</button>
     </>
