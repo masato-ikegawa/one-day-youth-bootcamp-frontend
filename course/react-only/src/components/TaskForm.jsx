@@ -70,9 +70,12 @@ export const TaskForm = ({
         fontSize: '20px',
         borderRadius: '100vh',
         borderColor: 'white',
+        marginLeft: '2%'
       }}
       onClick={handleAddTask}>Add</button>
-      <button onClick={handleAddTag}>Lab</button>
+      <button 
+        style = {{marginLeft: '4%'}}
+        onClick={handleAddTag}>Lab</button>
       <br />
       <button onClick={handleClearTasks}>Clear</button>
     </>
