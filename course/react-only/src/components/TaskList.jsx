@@ -7,7 +7,6 @@ export const TaskList = ({ tasks, setTasks }) => {
     const newTasks = tasks.map((task, _i) => {
       return _i === i ? { ...task, isDone: e.target.checked } : task;
     });
-    console.log(newTasks);
     setTasks(newTasks);
   };
 
